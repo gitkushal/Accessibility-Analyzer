@@ -1,0 +1,198 @@
+.scan-results {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.scan-info h2 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+.scanned-url, .scan-date {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.scanned-url a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.scanned-url a:hover {
+  text-decoration: underline;
+}
+
+.new-scan-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.new-scan-button:hover {
+  background-color: #0056b3;
+}
+
+.results-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.score-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.score-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.score-details p {
+  margin: 0;
+  color: #666;
+}
+
+.issue-breakdown {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.issue-breakdown h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.breakdown-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.breakdown-count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.breakdown-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.issues-section {
+  margin-top: 2rem;
+}
+
+.issues-section h3 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.issues-list {
+  /* IssueCard components will be rendered here */
+}
+
+.no-issues {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-issues h3 {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.no-issues p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .scan-results {
+    padding: 1rem;
+  }
+  
+  .results-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .results-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .breakdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
